@@ -5,8 +5,7 @@ const quotesRouter = require('./routes/quotes.js');
 const complainRouter = require('./routes/complain.js');
 const apiRouter = require('./routes/api.js');
 
-const port = 3000;
-
+const port = process.env.PORT || process.env.NODE_PORT || 3000;
 const app = express();
 const filePath404Page = path.resolve(__dirname, '../client/404.html');
 
