@@ -9,6 +9,8 @@ const { quotes } = data;
 const getAllQuotes = () => quotes;
 const randomQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
 const recentQuote = () => quotes[quotes.length - 1];
-const getQuoteById = (id) => quotes.find(quote => quote.id === id);
+const getQuoteById = (id) => quotes.find((quote) => quote.id === id);
 
-module.exports = { getAllQuotes, randomQuote, recentQuote, getQuoteById };
+module.exports = {
+  getAllQuotes, randomQuote, recentQuote, getQuoteById,
+};

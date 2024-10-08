@@ -11,6 +11,7 @@ const filePath404Page = path.resolve(__dirname, '../client/404.html');
 
 // Serve static files from the 'client' folder
 app.use(express.static('client'));
+app.use(express.json());
 
 app.use('/', indexRouter);
 app.use('/bye', indexRouter);

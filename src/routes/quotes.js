@@ -1,5 +1,6 @@
 const express = require('express');
 const db = require('../db.js');
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -8,7 +9,7 @@ router.get('/', (req, res) => {
     const quote = db.getQuoteById(id);
     return quote ? res.json(quote) : res.json({});
   }
-  res.json(db.getAllQuotes());
+  return res.json(db.getAllQuotes());
 });
 
 router.get('/random', (req, res) => {
@@ -26,4 +27,3 @@ router.get('/:id', (req, res) => {
 });
 
 module.exports = router;
-
